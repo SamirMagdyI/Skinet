@@ -16,7 +16,7 @@ namespace Core.Specification
             AddInclude(p=>p.ProductType);
         }
 
-        public ProductWithTypesAndBrandsSpecification(int id) : base(p=>p.Id==id)
+        public ProductWithTypesAndBrandsSpecification(int id) : base(x=>x.Id==id)
         {
             AddInclude(p => p.ProductBrand);
             AddInclude(p => p.ProductType);

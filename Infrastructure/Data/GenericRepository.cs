@@ -40,7 +40,7 @@ namespace Infrastructure.Data
 
         private IQueryable<T> ApplySpecification(ISpecification<T> spec)
         {
-            return SpecificationEvaluator<T>.GetQuery(spec:spec,inputQuery:_context.Set<T>().AsQueryable());
+            return SpecificationEvaluator<T>.GetQuery(spec,_context.Set<T>().AsQueryable());
         }
     }
 }
