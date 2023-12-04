@@ -51,7 +51,8 @@ namespace API.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType(type: typeof(ApiResponse), statusCode: StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Product>> GetProduct(int id)
+        [ProducesResponseType(type: typeof(ProductToReturnDto), statusCode: StatusCodes.Status200OK)]
+        public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
         {
             var spec = new ProductWithTypesAndBrandsSpecification(id);
             var product = await _productRepo.GetEntityWithSpec(spec);
