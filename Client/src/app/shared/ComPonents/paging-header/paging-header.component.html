@@ -1,0 +1,25 @@
+<header class="my-2 mx-2 fs-5">
+    <span *ngIf="this.totalCount && this.totalCount !== 0"
+      >showing
+      <strong>
+        {{
+          (pageNumber - 1) * pageSize +
+            1
+        }}
+        -
+        {{
+          pageNumber * pageSize >
+          totalCount
+            ? this.totalCount
+            : pageNumber * pageSize
+        }}
+      </strong>
+      of
+      <strong>
+        {{ this.totalCount }}
+      </strong></span
+    >
+    <span *ngIf="totalCount === 0"
+      >There are 0 result for this filter</span
+    >
+  </header>
