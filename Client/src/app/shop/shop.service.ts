@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { IPagination } from '../shared/Models/IPagination';
 import { map } from 'rxjs/internal/operators/map';
 import { ShopParams } from '../shared/Models/ShopParams';
+import { IProduct } from '../shared/Models/IProduct';
 
 @Injectable({
   providedIn: 'root',
@@ -37,6 +38,10 @@ export class ShopService {
         params: params,
       })
       .pipe(map((response) => response.body));
+  }
+
+  getProduct(id: number) {
+    return this.http.get<IProduct>(this.baseUrl + 'Products/' + id);
   }
 
   getBrands() {

@@ -9,3 +9,15 @@
     top: -12px;
     right: 32px;
 }
+a{
+    color:black;
+    &.active{
+        color:orange;
+    }
+    &:hover {
+        color:orange;
+    }
+}
+.logo{
+    cursor: pointer;
+}

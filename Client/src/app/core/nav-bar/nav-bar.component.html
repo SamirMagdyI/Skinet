@@ -1,24 +1,31 @@
 <header
-  class="d-flex flex-column flex-md-row align-items-center  mb-3 border-bottom justify-content-between pt-3 navbar sticky-top bg-light-subtle "
+  class="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom justify-content-between pt-3 navbar sticky-top bg-light-subtle"
 >
   <img
     src="./assets/images/logo.png"
     alt="Skinet logo"
     style="max-height: 60px"
-    class="mx-2"
+    class="mx-2 navbar-brand logo"
+    routerLink="/"
   />
 
-  <nav class="my-2 mt-md-0 text-uppercase fs-4">
-    <a class="me-3 py-1 link-body-emphasis text-decoration-none" href="#"
-      >Features</a
+  <nav class="my-2 mt-md-0 text-uppercase fs-4 nav">
+    <a
+      class="me-3 py-1  text-decoration-none"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
     >
-    <a class="me-3 py-1 link-body-emphasis text-decoration-none" href="#"
-      >Enterprise</a
+    <a
+      class="me-3 py-1   text-decoration-none"
+      routerLink="/shop"
+      routerLinkActive="active "
+      >Shop</a
     >
-    <a class="me-3 py-1 link-body-emphasis text-decoration-none" href="#"
-      >Support</a
+    <a class="me-3 py-1 text-decoration-none" routerLink="/"
+      >Contact</a
     >
-    <a class="py-1 link-body-emphasis text-decoration-none" href="#">Pricing</a>
   </nav>
 
   <div class="d-flex align-items-center">
